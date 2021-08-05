@@ -1,7 +1,8 @@
+'use strict';
 ////////////////////////////////////////////////////////////////////////////////////////////////  lesson02
 
-number=266219;
-     result = 1;
+let number=266219;
+let result = 1;
     while (number) {
         result *= number % 10;
         number = Math.floor(number / 10);
@@ -9,20 +10,20 @@ number=266219;
     console.log(result);
 
 
-newResult=1
-    for(i=1;i<=3;i++){
-        newResult*=result
+let newResult=1
+    for(let i=1;i<=3;i++){
+        newResult*=result;
     }
     console.log(newResult);
 
 
-   x= newResult.toString()
-   newResult=x.split('')
-   result=newResult[0]+newResult[1]
+  let x= newResult.toString();
+   newResult=x.split('');
+   result=newResult[0]+newResult[1];
    result=+result
+;
 
-
-    console.log(result)
+    console.log(result);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////  lesson03
 
@@ -35,8 +36,8 @@ newResult=1
     else if (lang=='en'){
         return('monday, tuestay, wednesday, thursday, friday, saturday, sunday')
     }
-}
-console.log(language_1('ru'))
+};
+console.log(language_1('ru'));
 
 //
 let language_2=function(lang){
@@ -47,8 +48,8 @@ let language_2=function(lang){
         return('monday, tuestay, wednesday, thursday, friday, saturday, sunday');
     }
 
-}
-console.log(language_2('ru'))
+};
+console.log(language_2('ru'));
 
 //
 let language_3=function(lang){
@@ -58,8 +59,8 @@ let arr= {
     en: ['monday, tuesday, wednesday, thursday, friday, saturday, sunday']
 }
 return arr[lang]
-}
-console.log(language_3('en'))
+};
+console.log(language_3('en'));
 
 //
 
@@ -67,8 +68,8 @@ let post=function(namePerson){
     (namePerson=='Артем') ? console.log('Директор') : console.log('Студент');
     (namePerson=='Максим') ? console.log('Преподаватель') : console.log('Студент')
 
-}
-post('Максим')
+};
+post('Максим');
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////  lesson04
@@ -89,3 +90,33 @@ if(word.length >30){
 }}
 lesson04(' Из нее льет — я Посейдон, Она сразу дает, ну спасибо Хочет отношений, Упаси Бог Но, когда я в ней — я Pussy Boy Из нее льет — я Посейдон, Она сразу дает, ну спасибо Хочет отношений, Упаси Бог Но, когда я в ней — я Pussy Boy ')
 
+
+////////////////////////////////////////////////////////////////////////////////////////////////  lesson05
+
+
+
+
+let start2or4 = function(arr){
+    arr.forEach((arr)=>{
+        if (arr.startsWith('2') || arr.startsWith('4')) {
+            console.log(arr);
+    }})
+}
+start2or4(['234', '732', '5634537', '333', '444', '980842984', '243509045'])
+
+
+let primeNumber = function(numbeer){
+    let j;
+    nextPrime: for(let i=2; i<=numbeer; i++){
+        for( j=2; j<i; j++){
+            if (i%j === 0){
+                continue nextPrime;
+            } 
+        }
+        
+        console.log(i + ' Делители этого числа: '+ 1 +' и '+ j);
+    }
+}
+primeNumber(100);
+
+    
